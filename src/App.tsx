@@ -3,7 +3,6 @@ import { Home } from "./pages/home";
 import { Solucoes } from "./pages/soluções";
 import { Layout } from "./components/layout";
 import { ScrollProvider } from "./hooks/useRef";
-import { useScrolltop } from "./hooks/useScrollTop";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./assets/style/themes";
 import { GlobalStyle } from "./assets/style/globalStyle";
