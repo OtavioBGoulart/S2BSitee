@@ -37,7 +37,7 @@ const Container = styled.div`
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #003c5d;
+    background-color: ${({ theme }) => theme.colors.primary.light};
 `
 
 const SocialMedia = styled.div`
@@ -46,9 +46,8 @@ const SocialMedia = styled.div`
     gap: 10px;
 
     p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.2rem;
-        color: white;
+        font-size: ${({ theme }) => theme.fontSizes.medium};
+        color: ${({ theme }) => theme.colors.secondary.lighter};
     }
 `
 
@@ -63,11 +62,11 @@ const Adress = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    color: ${({ theme }) => theme.colors.secondary.lighter};
+    font-size: ${({ theme }) => theme.fonts.content};
 
     p {
-        font-size: 0.8rem;
+        font-size: ${({ theme }) => theme.fontSizes.small};
         font-weight: 400;
     }
 

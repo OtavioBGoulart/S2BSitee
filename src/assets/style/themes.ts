@@ -4,7 +4,7 @@ export const theme: DefaultTheme = {
     colors: {
         primary: {
             light: "#003c5d",
-            lighter: "#2088c0",
+            lighter: "#48d1cc",
             default: "blue"
         },
         secondary: {
@@ -23,5 +23,6 @@ export const theme: DefaultTheme = {
         medium: "1rem",
         xmedium: "1.2rem",
         large: "1.5rem",
+        xlarge: "1.8rem",
     }
 }
