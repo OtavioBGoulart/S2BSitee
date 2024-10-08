@@ -4,7 +4,7 @@ export function Sobre() {
   return (
     <Container>
       <Content>
-        <h1>QUEM SOMOS?</h1>
+        <h1>Quem Somos?</h1>
         <span>
           A S2B Software possui mais de 30 anos de experiência em desenvolvimento de software e otimização de processos, com foco especial no agronegócio, utilizando tecnologia de ponta.
           <br /><br />

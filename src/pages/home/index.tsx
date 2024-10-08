@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Cards } from "./cards";
+import { Erp } from "./erp";
 
 export function Home() {
 
@@ -10,6 +11,7 @@ export function Home() {
                 <img src="s2bbanner.png" />
             </Banner>
             <Cards />
+            <Erp />
         </MainContainer>
     );
 }

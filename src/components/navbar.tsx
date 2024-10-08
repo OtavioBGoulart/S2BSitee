@@ -29,8 +29,8 @@ const Header = styled.div`
     align-items: center;
 
     img {
-        width: 400px;
-        height: 400px;
+        width: 150px;
+        height: 200px;
         cursor: pointer;
     }
 
@@ -42,6 +42,9 @@ const Header = styled.div`
 
     span {
     color:  ${({ theme }) => theme.colors.primary.light};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    font: ${({ theme }) => theme.fonts.heading};
+    font-weight: 400;
     cursor: pointer;
    
 

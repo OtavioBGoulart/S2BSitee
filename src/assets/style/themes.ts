@@ -4,13 +4,14 @@ export const theme: DefaultTheme = {
     colors: {
         primary: {
             light: "#003c5d",
-            lighter: "#48d1cc",
+            lighter: "#80c6e8",
             default: "blue"
         },
         secondary: {
             light: '#f5f1f1',
             lighter: 'white',
-            default: '#06EFF3',
+            dark: 'gray',
+            default: '#d1d1d1',
         }
     },
     fonts: {

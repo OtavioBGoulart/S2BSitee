@@ -240,10 +240,10 @@ const FormWrapper = styled.div`
 const FormTitle = styled.h2`
   width: 100%;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;
+  font-family: ${({ theme }) => theme.fonts.content};
+  font-size: ${({ theme }) => theme.fontSizes.xlarge};
   font-weight: 500;
-  color: #003c5d; 
+  color: ${({ theme }) => theme.colors.primary.light}; 
   margin-bottom: 50px;
 `;
 

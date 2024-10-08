@@ -7,18 +7,31 @@ export function Cards() {
 
     return (
         <MainContainer>
+            <h1>Alavanque seu negócio com o sistema de gestão mais completo da região</h1>
             <CardsContainer>
                 <Card>
-                    <span>Soluções</span>
-                    <img src="solutions.png" />
+                    <span>Integrações</span>
+                    <img src="integracao.png" />
                 </Card>
                 <Card>
                     <span>Segurança</span>
-                    <img src="security.png" />
+                    <img src="seguranca.png" />
                 </Card>
                 <Card>
                     <span>Escalabilidade</span>
-                    <img src="scale.png" />
+                    <img src="grafico-de-barras.png" />
+                </Card>
+                <Card>
+                    <span>Relatórios</span>
+                    <img src="relatorio.png" />
+                </Card>
+                <Card>
+                    <span>Confiabilidade</span>
+                    <img src="confiabilidade.png" />
+                </Card>
+                <Card>
+                    <span>Suporte</span>
+                    <img src="definicoes.png" />
                 </Card>
             </CardsContainer>
             {/* <MoreInfo>
@@ -44,24 +57,30 @@ const Card = styled.div`
         width: 100%;
     };
 
-    &:hover {
+    /* &:hover {
         transform: translateY(-10px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
         0 12px 40px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
-    }
+    } */
 
     span {
-    font-family: 'Montserrat', sans-serif;
-    color: #003c5d;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: ${({ theme }) => theme.fonts.content};
+    color: ${({ theme }) => theme.colors.primary.light};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
     }
 
     img {
-        width: 60%;
+        width: 70px;
+        height: 70px;
+        transition: transform 1s ease-in-out;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
     }
 `
 
@@ -89,6 +108,8 @@ const CardsContainer = styled.div`
     width: 80%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     justify-content: space-between;
 
     @media (max-width: 900px) {
@@ -102,7 +123,14 @@ const MainContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 70px;
     padding: 20px 20px;
     background-color: white;
+
+    h1 {
+        font-family: ${({ theme }) => theme.fonts.content};
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
 `
