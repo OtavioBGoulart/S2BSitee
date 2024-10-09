@@ -7,7 +7,7 @@ export function Cards() {
 
     return (
         <MainContainer>
-            <h1>Alavanque seu negócio com o sistema de gestão mais completo da região</h1>
+            <h1>Alavanque seu negócio com o sistema de gestão mais completo</h1>
             <CardsContainer>
                 <Card>
                     <span>Integrações</span>

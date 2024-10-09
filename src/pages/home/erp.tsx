@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { useNavigation } from "../../hooks/useNavigation";
 
 export function Erp() {
+
+    const { goToSolutions } = useNavigation()
 
     return (
         <Div>
@@ -13,7 +16,7 @@ export function Erp() {
                             Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
                             oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
                         </span>
-                        <SaibaMais>
+                        <SaibaMais onClick={goToSolutions}>
                             Saiba Mais
                         </SaibaMais>
                     </Card>
@@ -23,7 +26,7 @@ export function Erp() {
                             Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
                             oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
                         </span>
-                        <SaibaMais>
+                        <SaibaMais onClick={goToSolutions}>
                             Saiba Mais
                         </SaibaMais>
                     </Card>
@@ -62,6 +65,11 @@ const CardContainer = styled.div`
     justify-content: center;
     gap: 100px;
 
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 `
 
 const Card = styled.div`
@@ -88,6 +96,18 @@ const Card = styled.div`
         font-family: ${({ theme }) => theme.fonts.content};
         font-size: ${({ theme }) => theme.fontSizes.small};
     }
+
+
+    
+    @media(max-width: 768px) {
+        height: 350px;
+        width: 70%;
+
+        span {
+            font-size: ;
+        }
+    }
+
 `
 
 const SaibaMais = styled.button`
@@ -108,6 +128,7 @@ const SaibaMais = styled.button`
     transform: translateX(-50%);
 
     &:hover {
-        cursor: pointer;    
+        cursor: pointer;   
+        filter: brightness(95%) ;
     }
 `

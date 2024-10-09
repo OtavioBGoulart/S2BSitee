@@ -66,6 +66,11 @@ const CardContainer = styled.div`
     justify-content: center;
     gap: 100px;
 
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 `
 
 const Card = styled.div`
@@ -99,6 +104,11 @@ const Card = styled.div`
         transform: translateY(-10px);
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
+
+    @media(max-width: 768px) {
+        height: 350px;
+        width: 70%;
+    }
 `
 
 const SaibaMais = styled.button`
@@ -119,6 +129,7 @@ const SaibaMais = styled.button`
     transform: translateX(-50%);
 
     &:hover {
-        cursor: pointer;    
+        cursor: pointer;   
+        filter: brightness(95%) ;
     }
 `
