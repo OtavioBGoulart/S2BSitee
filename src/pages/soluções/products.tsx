@@ -3,100 +3,142 @@ import styled from "styled-components";
 export function Products() {
 
     return (
-        <ProductsContainer>
-            <CardsContainer>
-                <Card>
-                    <span>Sistema de Gestão para Agronegócio (neOagro)</span>
-                </Card>
-                <Card>
-                    <span>Inovação Agro IoT</span>
-                </Card>
-                <Card>
-                    <span>Serviços de Consultoria e Soluções em Business Intelligence (BI)</span>
-                </Card>
-                <Card>
-                    <span>Desenvolvimento de soluções  sob medida</span>
-                </Card>
-                <Card>
-                    <span>Consultoria em Análise e Melhoria de Processos</span>
-                </Card>
-                <Card>
-                    <span>Serviços de Gerenciamento de TI em Geral</span>
-                </Card>
-            </CardsContainer>
-        </ProductsContainer>
+        <Div>
+            <Container>
+                <h1>Produtos</h1>
+                <CardContainer>
+                    <Card>
+                        <h2>Sistema ERP NEOAGRO</h2>
+                        <span>Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
+                            oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
+                        </span>
+                        <SaibaMais>
+                            Saiba Mais
+                        </SaibaMais>
+                    </Card>
+                    <Card>
+                        <h2>Busniness Inteligence</h2>
+                        <span>Transformar dados em insights estrategicas a nossa proposta. Com isto sua empresa pode tomar decsões Com a realidade muitas vezes complexa,
+                            somos especialistas em otimizar a coleta e análise de dados, convertendo a sua empresa em uma empresa inteligente!
+                        </span>
+                        <SaibaMais>
+                            Saiba Mais
+                        </SaibaMais>
+                    </Card>
+                    <Card>
+                        <h2>Gerenciamento TI</h2>
+                        <span>Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
+                            oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
+                        </span>
+                        <SaibaMais>
+                            Saiba Mais
+                        </SaibaMais>
+                    </Card>
+                </CardContainer>
+            </Container>
+        </Div>
     )
 }
 
-
-const ProductsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  background: linear-gradient(90deg, 
+const Div = styled.div`
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, 
     ${({ theme }) => theme.colors.primary.light}, 
     #2a4f78,
     ${({ theme }) => theme.colors.primary.lighter}
-  );
+  ); 
 `
-
-const CardsContainer = styled.div`
+const Container = styled.div`
     width: 80%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
 
-    @media (max-width: 900px) {
+    h1 {
+        color: ${({ theme }) => theme.colors.secondary.light};
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        font-family: ${({ theme }) => theme.fonts.main};
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 40px;
+    }   
+
+    @media(max-width: 768px) {
+       h1 {
+        font-size: ${({ theme }) => theme.fontSizes.large};
+       }
+    }
+`;
+
+const CardContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+
+    @media(max-width: 768px) {
         flex-direction: column;
         align-items: center;
-        gap: 15px
-    };
+    }
+
 `
 
 const Card = styled.div`
-    width: 30%;
-    height: 150px;
-    max-height: 350px;
-    padding: 10px;
-    border: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #003c5d;
-    border: 20px;
+    justify-content: space-between;
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
-    transition: transform 0.2 ease-in-out, box-shadow 0.2 ease-in-out;
+    border: 3px solid ${({ theme }) => theme.colors.secondary.light};
+    border-radius: 40px;
+    padding: 20px 40px;
+    width: 400px;
+    transition: transform 0.2s ease-in-out box-shadow 0.2s ease-in-out;
 
-    @media (max-width: 900px) {
-        width: 100%;
-    };
-
-    /* &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
-        0 12px 40px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-    } */
-
-    span {
-    font-family: ${({ theme }) => theme.fonts.content};
-    color: ${({ theme }) => theme.colors.primary.light};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 500;
-    margin-bottom: 20px;
-    text-align: center;
+    h2 {
+        color: ${({ theme }) => theme.colors.primary.light};
+        font-family: ${({ theme }) => theme.fonts.content};
+        font-size: ${({ theme }) => theme.fontSizes.xmedium};
+        margin-bottom: 20px;
+        text-align: center;
     }
 
-    img {
-        width: 70px;
-        height: 70px;
-        transition: transform 1s ease-in-out;
+    span {
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        font-family: ${({ theme }) => theme.fonts.content};
+        font-size: ${({ theme }) => theme.fontSizes.small};
+        flex-grow: 1;
+    }
 
-        &:hover {
-            transform: rotate(360deg);
-        }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media(max-width: 768px) {
+        height: 350px;
+        width: 70%;
+    }
+`
+
+const SaibaMais = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 50%;
+    height: 50px;
+    font-family: ${({ theme }) => theme.fonts.main};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
+    font-weight: 600;
+    background-color: ${({ theme }) => theme.colors.primary.lighter};
+    color: ${({ theme }) => theme.colors.secondary.lighter};
+    margin-top: 20px; 
+    align-self: center;
+
+    &:hover {
+        cursor: pointer;   
+        filter: brightness(95%) ;
     }
 `

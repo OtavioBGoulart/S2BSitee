@@ -37,7 +37,7 @@ const Container = styled.div`
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.colors.primary.light};
+    background-color: ${({ theme }) => theme.colors.secondary.light};
 `
 
 const SocialMedia = styled.div`
@@ -47,7 +47,7 @@ const SocialMedia = styled.div`
 
     p {
         font-size: ${({ theme }) => theme.fontSizes.medium};
-        color: ${({ theme }) => theme.colors.secondary.lighter};
+        color: ${({ theme }) => theme.colors.primary.light};
     }
 `
 
@@ -55,19 +55,19 @@ const Icons = styled.div`
     display: flex;
     justify-content: flex-start;
     gap: 12px;
-    color: white;
+    color: ${({ theme }) => theme.colors.primary.light};
 `
 
 const Adress = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
-    color: ${({ theme }) => theme.colors.secondary.lighter};
-    font-size: ${({ theme }) => theme.fonts.content};
+    color: ${({ theme }) => theme.colors.primary.light};
+    font-family: ${({ theme }) => theme.fonts.heading};
 
     p {
         font-size: ${({ theme }) => theme.fontSizes.small};
-        font-weight: 400;
+        font-weight: 550;
     }
 
 `

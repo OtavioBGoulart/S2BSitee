@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Dashboards } from "./dashboards";
 import { Products } from "./products";
+import { Info } from "./info_solutions";
 
 export function Solucoes() {
   return (
@@ -38,8 +38,8 @@ export function Solucoes() {
           </TextContainer> */}
         </Content>
       </Container>
+      <Info />
       <Products />
-      <Dashboards />
     </>
   );
 }
