@@ -14,17 +14,11 @@ export function Sobre() {
           <br /><br />
           Acreditamos que, no agronegócio, assim como em qualquer setor, é essencial promover a transparência no processo produtivo. Isso é feito por meio do registro automático de dados com tecnologia inovadora (IoT), minimizando a interferência humana sempre que possível. Essa transparência e rastreabilidade são cruciais para compreender o processo e estabelecer pontos de medição eficazes.
           <br /><br />
-          Adoramos simplificar o que parece ser complexo!
+          <Destaque>
+            Adoramos simplificar o que parece ser complexo!
+          </Destaque>
           <br /><br />
-          Aqui estão os produtos que oferecemos:
         </span>
-        <ul>
-          <li>Sistema de Gestão para Agronegócio</li>
-          <li>Consultoria em Análise e Melhoria de Processos</li>
-          <li>Serviços de Consultoria e Soluções em Business Intelligence (BI)</li>
-          <li>Serviços de Gerenciamento de TI em Geral</li>
-        </ul>
-
       </Content>
     </Container>
   );
@@ -45,15 +39,16 @@ const Content = styled.div`
   
 
   h1 {
-    color: ${({ theme }) => theme.colors.primary.light};
-    font: ${({ theme }) => theme.fonts.main};
+    color: ${({ theme }) => theme.colors.secondary.dark};
+    font-family: ${({ theme }) => theme.fonts.main};
     font-size: ${({ theme }) => theme.fontSizes.xlarge};
+    font-weight: 800;
     margin-bottom: 20px;
     text-align: center;
   }
 
   span {
-    color: ${({ theme }) => theme.colors.primary.light};
+    color: ${({ theme }) => theme.colors.secondary.dark};
     font-size: ${({ theme }) => theme.fontSizes.medium};
     display: block;
     margin-bottom: 20px;
@@ -62,19 +57,6 @@ const Content = styled.div`
   br {
     margin-bottom: 20px;
   }
-
-  ul {
-    margin-top: 25px;
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-
- li {
-    color: ${({ theme }) => theme.colors.primary.light};
-    font-size: ${({ theme }) => theme.fontSizes.xmedium};
-    margin-bottom: 20px;
-    font-weight: bolder;
- }
 
 
   @media (max-width: 768px) {
@@ -102,3 +84,8 @@ const Content = styled.div`
 
   }
 `;
+
+const Destaque = styled.span`
+  color: ${({ theme }) => theme.colors.primary.light};
+  font-size: ${({ theme }) => theme.fontSizes.medium};
+`

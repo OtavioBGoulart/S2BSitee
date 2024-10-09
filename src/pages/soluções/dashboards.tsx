@@ -56,6 +56,7 @@ const Container = styled.div`
         color: ${({ theme }) => theme.colors.secondary.dark};
         font-size: ${({ theme }) => theme.fontSizes.xlarge};
         font-family: ${({ theme }) => theme.fonts.main};
+        font-weight: 800;
         text-align: center;
         margin-bottom: 40px;
     }   

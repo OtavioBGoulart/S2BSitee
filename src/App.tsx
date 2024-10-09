@@ -8,6 +8,7 @@ import { theme } from "./assets/style/themes";
 import { GlobalStyle } from "./assets/style/globalStyle";
 import { Sobre } from "./pages/sobre";
 import { Neoagro } from "./pages/neoagro";
+import { Form } from "./components/form";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/neoagro",
         element: <Neoagro />
+      },
+      {
+        path: "/contatos",
+        element: <Form />
       }
     ]
   }

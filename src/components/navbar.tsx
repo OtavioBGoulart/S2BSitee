@@ -1,11 +1,9 @@
 import styled from "styled-components";
 import { useNavigation } from "../hooks/useNavigation";
-import { useScroll } from "../hooks/useRef";
 
 export function Navbar() {
 
-    const { goToSolutions, goHome, goAbout } = useNavigation();
-    const { scrollToContatos } = useScroll();
+    const { goToSolutions, goHome, goAbout, goToContacts } = useNavigation();
 
     return (
         <Container>
@@ -13,9 +11,9 @@ export function Navbar() {
                 <img src="logos2b.svg" onClick={goHome} />
                 <div>
                     <span onClick={goHome}>Home</span>
-                    <span onClick={scrollToContatos}>Contato </span>
                     <span onClick={goToSolutions}>Soluções </span>
                     <span onClick={goAbout}>Sobre </span>
+                    <span onClick={goToContacts}>Contato </span>
                 </div>
             </Header>
         </Container>

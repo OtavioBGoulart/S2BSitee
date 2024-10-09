@@ -191,7 +191,7 @@ const Container = styled.div`
     display: flex;
     padding: 20px 20px;
     box-sizing: border-box;
-    background-color: #f5f1f1; 
+    background-color: ${({ theme }) => theme.colors.secondary.lighter}; 
 `
 
 const FormContainer = styled.div`

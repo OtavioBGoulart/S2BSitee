@@ -17,9 +17,6 @@ export function Layout() {
             <Main>
                 <Outlet />
             </Main>
-            <div ref={contatosRef}>
-                <Form />
-            </div>
             <Footer />
         </div>
     );
