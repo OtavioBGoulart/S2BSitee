@@ -191,7 +191,12 @@ const Container = styled.div`
     display: flex;
     padding: 20px 20px;
     box-sizing: border-box;
-    background-color: ${({ theme }) => theme.colors.secondary.lighter}; 
+    /* background-color: ${({ theme }) => theme.colors.secondary.lighter};  */
+    background: linear-gradient(90deg, 
+    ${({ theme }) => theme.colors.primary.light}, 
+    #2a4f78,
+    ${({ theme }) => theme.colors.primary.lighter}
+  ); 
 `
 
 const FormContainer = styled.div`
@@ -222,7 +227,7 @@ const FormWrapper = styled.div`
 
   input, text-area, select {
     border-radius: 5px;
-    border: 1px solid #003c5d;
+    border: 1px solid ${({ theme }) => theme.colors.secondary.light};;
  
 
     &:-webkit-autofill {
@@ -243,7 +248,7 @@ const FormTitle = styled.h2`
   font-family: ${({ theme }) => theme.fonts.main};
   font-size: ${({ theme }) => theme.fontSizes.xlarge};
   font-weight: 800;
-  color: ${({ theme }) => theme.colors.secondary.dark}; 
+  color: ${({ theme }) => theme.colors.secondary.light}; 
   margin-bottom: 50px;
 `;
 
@@ -255,20 +260,18 @@ const FormField = styled.div`
 const Label = styled.label`
   display: block;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: #003c5d;
+  font-size:  ${({ theme }) => theme.fontSizes.xmedium}; 
+  color: ${({ theme }) => theme.colors.secondary.light}; 
 `;
 
 const Input = styled.input`
   width: 100%;
   padding: 8px 4px; 
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  color: #003c5d; 
-  background-color: white; 
+  color: ${({ theme }) => theme.colors.primary.light}; 
+  background-color: ${({ theme }) => theme.colors.secondary.light}; 
   transition: border-bottom-color 0.3s;
 
 `;
@@ -278,8 +281,8 @@ const Textarea = styled.textarea<{ rows?: number }>`
   padding: 8px 4px; 
   border-radius: 5px;
   resize: none; 
-  color: #003c5d;
-  background-color: white; 
+  color: ${({ theme }) => theme.colors.secondary.light};
+  background-color: ${({ theme }) => theme.colors.secondary.light}; 
   transition: border-bottom-color 0.3s;
 `;
 
