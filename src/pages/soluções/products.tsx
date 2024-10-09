@@ -67,7 +67,7 @@ const Card = styled.div`
     justify-content: center;
     border: 1px solid #003c5d;
     border: 20px;
-    background-color: ${({ theme }) => theme.colors.secondary.default};
+    background-color: ${({ theme }) => theme.colors.secondary.lighter};
     transition: transform 0.2 ease-in-out, box-shadow 0.2 ease-in-out;
 
     @media (max-width: 900px) {

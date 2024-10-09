@@ -8,23 +8,30 @@ export function Erp() {
     return (
         <Div>
             <Container>
-                <h1>Sistema de gestão ERP</h1>
+                <h1>Conheça nossas soluções</h1>
                 <CardContainer>
                     <Card>
-                        <h2>NEOAGRO SOLUTIONS</h2>
-                        <span>Nosso sistema Neoagro está no mercado há mais de 30 anos solucionando e inovando em todas as formas.
-                            Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
-                            oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
+                        <h2>Foco no cliente</h2>
+                        <span>Estamos sempre próximos dos nossos clientes, mantendo linhas de comunicação ágeis.
+                            Isso torna o processo de criação mais eficiente, permitindo que entreguemos soluções de forma rápida e eficaz.
                         </span>
                         <SaibaMais onClick={goToNeoagro}>
                             Saiba Mais
                         </SaibaMais>
                     </Card>
                     <Card>
-                        <h2>NEOAGRO SOLUTIONS</h2>
-                        <span>Nosso sistema Neoagro está no mercado há mais de 30 anos solucionando e inovando em todas as formas.
-                            Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
-                            oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
+                        <h2>Ambientes Exigentes</h2>
+                        <span>Desenvolvemos sistemas para empresas multinacionais no Brasil, utilizados por centenas de usuários,
+                            sempre em conformidade com as rigorosas exigências das auditorias internacionais.
+                        </span>
+                        <SaibaMais onClick={goToSolutions}>
+                            Saiba Mais
+                        </SaibaMais>
+                    </Card>
+                    <Card>
+                        <h2>Inovação</h2>
+                        <span>Acreditamos que, no agronegócio, assim como em qualquer setor, é essencial promover a transparência no processo produtivo. Isso é feito por meio do registro automático de dados com tecnologia inovadora (IoT), minimizando a interferência humana sempre que possível.
+                            Essa transparência e rastreabilidade são cruciais para compreender o processo e estabelecer pontos de medição eficazes.
                         </span>
                         <SaibaMais onClick={goToSolutions}>
                             Saiba Mais
@@ -70,7 +77,8 @@ const Container = styled.div`
 const CardContainer = styled.div`
     display: flex;
     justify-content: center;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 50px;
 
     @media(max-width: 768px) {
         flex-direction: column;
@@ -86,9 +94,9 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 40px;
     padding: 20px 40px;
-    width: 50%;
+    width: 30%;
     min-width: 300px;
-    max-width: 400px;
+    max-width: 600px;
 
     h2 {
         color: ${({ theme }) => theme.colors.secondary.dark};
@@ -116,7 +124,7 @@ const SaibaMais = styled.button`
     justify-content: center;
     align-items: center;
     border: none;
-    width: 30%;
+    width: 50%;
     height: 50px;
     font-family: ${({ theme }) => theme.fonts.main};
     font-size: ${({ theme }) => theme.fontSizes.medium};

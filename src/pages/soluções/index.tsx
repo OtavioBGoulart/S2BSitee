@@ -24,7 +24,7 @@ export function Solucoes() {
               <img src="scale.png" />
             </Card>
           </CardsContainer> */}
-          <TextContainer>
+          {/* <TextContainer>
             <h2>Foco no cliente</h2>
             <span>Estamos sempre próximos dos nossos clientes, mantendo linhas de comunicação ágeis. Isso torna o processo de criação mais eficiente, permitindo que entreguemos soluções de forma rápida e eficaz.</span>
           </TextContainer>
@@ -35,7 +35,7 @@ export function Solucoes() {
           <TextContainer>
             <h2>Inovação</h2>
             <span>Acreditamos que, no agronegócio, assim como em qualquer setor, é essencial promover a transparência no processo produtivo. Isso é feito por meio do registro automático de dados com tecnologia inovadora (IoT), minimizando a interferência humana sempre que possível. Essa transparência e rastreabilidade são cruciais para compreender o processo e estabelecer pontos de medição eficazes.</span>
-          </TextContainer>
+          </TextContainer> */}
         </Content>
       </Container>
       <Products />
@@ -48,7 +48,6 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary.lighter};
   display: flex;
   justify-content: center;
-  padding: 0px 20px;
 `;
 
 const Header = styled.div`
@@ -63,6 +62,7 @@ const Header = styled.div`
     color: ${({ theme }) => theme.colors.secondary.dark};
     font-family: ${({ theme }) => theme.fonts.heading};
     font-size: ${({ theme }) => theme.fontSizes.xlarge};
+    font-weight: 800;
   }
 
 
@@ -75,11 +75,11 @@ const Header = styled.div`
 
 const Content = styled.div`
   max-width: 1200px;
-  padding: 20px;
-  line-height: 1.6;
   text-align: justify;
 
   h2 {
+    text-align: center;
+    margin-bottom: 10px;
     color: ${({ theme }) => theme.colors.primary.light};
     font-size: ${({ theme }) => theme.fontSizes.xmedium};
   }
@@ -124,9 +124,14 @@ const Content = styled.div`
   }
 `;
 
-const TextContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+// const TextContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     border: 2px solid ${({ theme }) => theme.colors.primary.light};
+//     border-radius: 15px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+//               0 6px 20px rgba(0, 0, 0, 0.1);
+//     padding: 10px;
     
-`
+// `
 
