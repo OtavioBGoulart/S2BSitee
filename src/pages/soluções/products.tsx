@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { useNavigation } from "../../hooks/useNavigation";
 
 export function Products() {
 
+    const { goToNeoagro } = useNavigation()
     return (
         <Div>
             <Container>
@@ -12,7 +14,7 @@ export function Products() {
                         <span>Ajudamos a gerenciar sua TI com as melhores práticas do mercado, focando na continuidade do seu negócio,
                             oferecendo melhor custo-benefício e otimizando a estrutura de comunicação, hardware e software utilizados.
                         </span>
-                        <SaibaMais>
+                        <SaibaMais onClick={goToNeoagro}>
                             Saiba Mais
                         </SaibaMais>
                     </Card>
@@ -112,7 +114,7 @@ const Card = styled.div`
     }
 
     &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 

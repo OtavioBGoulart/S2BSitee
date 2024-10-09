@@ -3,7 +3,7 @@ import { useNavigation } from "../../hooks/useNavigation";
 
 export function Erp() {
 
-    const { goToSolutions, goToNeoagro } = useNavigation()
+    const { goToSolutions } = useNavigation()
 
     return (
         <Div>
@@ -12,15 +12,17 @@ export function Erp() {
                 <CardContainer>
                     <Card>
                         <h2>Foco no cliente</h2>
+                        <img src="foco.png" />
                         <span>Estamos sempre próximos dos nossos clientes, mantendo linhas de comunicação ágeis.
                             Isso torna o processo de criação mais eficiente, permitindo que entreguemos soluções de forma rápida e eficaz.
                         </span>
-                        <SaibaMais onClick={goToNeoagro}>
+                        <SaibaMais onClick={goToSolutions}>
                             Saiba Mais
                         </SaibaMais>
                     </Card>
                     <Card>
                         <h2>Ambientes Exigentes</h2>
+                        <img src="ambiente.png" />
                         <span>Desenvolvemos sistemas para empresas multinacionais no Brasil, utilizados por centenas de usuários,
                             sempre em conformidade com as rigorosas exigências das auditorias internacionais.
                         </span>
@@ -30,6 +32,7 @@ export function Erp() {
                     </Card>
                     <Card>
                         <h2>Inovação</h2>
+                        <img src="ideia.png" />
                         <span>Acreditamos que, no agronegócio, assim como em qualquer setor, é essencial promover a transparência no processo produtivo. Isso é feito por meio do registro automático de dados com tecnologia inovadora (IoT), minimizando a interferência humana sempre que possível.
                             Essa transparência e rastreabilidade são cruciais para compreender o processo e estabelecer pontos de medição eficazes.
                         </span>
@@ -97,9 +100,11 @@ const Card = styled.div`
     width: 30%;
     min-width: 300px;
     max-width: 600px;
+    position: relative;
+    transition: transform 0.2s ease-in-out box-shadow 0.2s ease-in-out;
 
     h2 {
-        color: ${({ theme }) => theme.colors.secondary.dark};
+        color: ${({ theme }) => theme.colors.primary.light};
         font-family: ${({ theme }) => theme.fonts.content};
         font-size: ${({ theme }) => theme.fontSizes.xmedium};
         margin-bottom: 20px;
@@ -111,6 +116,20 @@ const Card = styled.div`
         font-family: ${({ theme }) => theme.fonts.content};
         font-size: ${({ theme }) => theme.fontSizes.small};
         flex-grow: 1; /* Faz o conteúdo crescer se necessário */
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    
+    &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     }
 
     @media(max-width: 768px) {

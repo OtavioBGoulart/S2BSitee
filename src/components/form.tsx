@@ -240,10 +240,10 @@ const FormWrapper = styled.div`
 const FormTitle = styled.h2`
   width: 100%;
   text-align: center;
-  font-family: ${({ theme }) => theme.fonts.content};
+  font-family: ${({ theme }) => theme.fonts.main};
   font-size: ${({ theme }) => theme.fontSizes.xlarge};
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.primary.light}; 
+  font-weight: 800;
+  color: ${({ theme }) => theme.colors.secondary.dark}; 
   margin-bottom: 50px;
 `;
 
@@ -300,7 +300,7 @@ const Button = styled.button`
   width: 30%;
   padding: 10px;
   border-radius: 8px ;
-  background-color: #e2dfdf;
+  background-color: ${({ theme }) => theme.colors.secondary.light}; ;
   color: #003c5d;
   border-radius: 4px;
   cursor: pointer;
@@ -309,7 +309,7 @@ const Button = styled.button`
   font-weight: 600;
 
   &:hover {
-    background-color: #003c5d;
+    background-color: ${({ theme }) => theme.colors.primary.light}; 
     color: white;
   }
 `;

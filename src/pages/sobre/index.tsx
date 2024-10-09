@@ -33,7 +33,6 @@ const Container = styled.div`
 
 const Content = styled.div`
   max-width: 800px;
-  padding: 20px;
   line-height: 1.6;
   text-align: justify;
   
