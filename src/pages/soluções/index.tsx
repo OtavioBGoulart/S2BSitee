@@ -68,7 +68,7 @@ const Header = styled.div`
 
   @media (max-width: 768px) {
     h1 {
-      font-size: ${({ theme }) => theme.fontSizes.medium}; 
+      font-size: ${({ theme }) => theme.fontSizes.large}; 
     }
   }
 `

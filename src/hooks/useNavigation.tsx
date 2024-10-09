@@ -19,5 +19,10 @@ export function useNavigation() {
         navigate("/sobre");
     }
 
-    return { goToContacts, goToSolutions, goHome, goAbout };
+    function goToNeoagro() {
+        navigate("/neoagro");
+    }
+
+
+    return { goToContacts, goToSolutions, goHome, goAbout, goToNeoagro };
 }

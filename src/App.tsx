@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./assets/style/themes";
 import { GlobalStyle } from "./assets/style/globalStyle";
 import { Sobre } from "./pages/sobre";
+import { Neoagro } from "./pages/neoagro";
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/sobre",
         element: <Sobre />
+      },
+      {
+        path: "/neoagro",
+        element: <Neoagro />
       }
     ]
   }
