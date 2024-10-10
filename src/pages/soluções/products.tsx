@@ -96,6 +96,7 @@ const Card = styled.div`
     border-radius: 40px;
     padding: 20px 40px;
     width: 400px;
+    height: auto;
     transition: transform 0.2s ease-in-out box-shadow 0.2s ease-in-out;
 
     h2 {
@@ -119,8 +120,7 @@ const Card = styled.div`
     }
 
     @media(max-width: 768px) {
-        height: 350px;
-        width: 70%;
+        width: 90%;
     }
 `
 

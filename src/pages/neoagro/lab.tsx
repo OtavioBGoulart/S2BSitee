@@ -1,45 +1,51 @@
 import styled from "styled-components";
 
-export function Info() {
+export function Lab() {
 
     return (
-        <ProductsContainer>
-            <CardsContainer>
-                <Card>
-                    <span>Sistema de Gestão para Agronegócio (neOagro)</span>
-                    <img src="software.png" />
-                </Card>
-                <Card>
-                    <span>Inovação Agro IoT</span>
-                    <img src="iot.png" />
-                </Card>
-                <Card>
-                    <span>Serviços de Consultoria e Soluções em Business Intelligence (BI)</span>
-                    <img src="business-intelligence.png" />
-                </Card>
-                <Card>
-                    <span>Desenvolvimento de soluções  sob medida</span>
-                    <img src="fita-metrica.png" />
-                </Card>
-                <Card>
-                    <span>Consultoria em Análise e Melhoria de Processos</span>
-                    <img src="melhoria.png" />
-                </Card>
-                <Card>
-                    <span>Serviços de Gerenciamento de TI em Geral</span>
-                    <img src="infra.png" />
-                </Card>
-            </CardsContainer>
-        </ProductsContainer>
+        <Container>
+            <h1>Módulo de laboratório</h1>
+            <ProductsContainer>
+                <CardsContainer>
+                    <Card>
+                        <img src="/software.png" />
+                        <span>Controle Atestado de Garantia</span>
+                    </Card>
+                    <Card>
+                        <img src="/iot.png" />
+                        <span>Controle Boletim de Análise</span>
+                    </Card>
+                    <Card>
+                        <img src="/business-intelligence.png" />
+                        <span>Ficha de Análise de Produto</span>
+                    </Card>
+                    <Card>
+                        <img src="/fita-metrica.png" />
+                        <span>Controle de Qualidade do Produto</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Testes avulsos de Laboratório</span>
+                    </Card>
+                </CardsContainer>
+            </ProductsContainer>
+        </Container>
     )
 }
 
+const Container = styled.div`
+    background-color: ${({ theme }) => theme.colors.secondary.lighter};
+    border-radius: 10px ;
+    min-height: 500px;
 
+    h1 {
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+    }
+`
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding: 50px;
-  background-color:  ${({ theme }) => theme.colors.secondary.lighter};;
 `
 
 const CardsContainer = styled.div`
@@ -64,9 +70,9 @@ const Card = styled.div`
     padding: 10px;
     border: none;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 10px;
     /* border: 1px solid white; */
     /* border: 20px;
     background-color: ${({ theme }) => theme.colors.secondary.lighter}; */
@@ -97,8 +103,8 @@ const Card = styled.div`
     }
 
     img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
 
         svg {
             color: ${({ theme }) => theme.colors.secondary.lighter};

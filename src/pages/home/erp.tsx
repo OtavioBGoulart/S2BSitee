@@ -96,7 +96,7 @@ const Card = styled.div`
     justify-content: space-between; /* Garante que o conteúdo e o botão fiquem separados */
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 40px;
-    padding: 20px 40px;
+    padding: 20px 60px;
     width: 30%;
     min-width: 300px;
     max-width: 600px;

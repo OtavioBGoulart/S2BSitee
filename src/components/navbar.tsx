@@ -8,7 +8,7 @@ export function Navbar() {
     return (
         <Container>
             <Header>
-                <img src="logos2b.svg" onClick={goHome} />
+                <img src="/logos2b.svg" onClick={goHome} />
                 <div>
                     <span onClick={goHome}>Home</span>
                     <span onClick={goToSolutions}>Soluções </span>

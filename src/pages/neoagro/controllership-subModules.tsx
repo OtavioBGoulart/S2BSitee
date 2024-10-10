@@ -1,73 +1,57 @@
 import styled from "styled-components";
 import { useNavigation } from "../../hooks/useNavigation";
 
-interface ModulesProps {
-    setModule: (moduleName: string) => void;
-}
 
-export function Modules({ setModule }: ModulesProps) {
 
-    const { goTobuys, goToDistribution, goToInvoicing, goToMarketing
-        , goToProduction, goToLab, goToSalesManagement
+export function CSubModules() {
+
+    const { goToCredit, goToBudget, goToAccounting, goToFinanceDepartament
+        , goToTaxDepartament, goToDistribution
     } = useNavigation();
 
     return (
         <Container>
-            <h1>Módulos</h1>
+            <h1>Submódulos da Controladoria</h1>
             <CardContainer>
                 <Card>
-                    <h2>Compras</h2>
-                    <img src="compras.png" />
-                    <SaibaMais onClick={goTobuys}>
+                    <h2>Contabilidade</h2>
+                    <img src="grafico-de-barras.png" />
+                    <SaibaMais onClick={goToAccounting}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
-                    <h2>Controladoria</h2>
-                    <img src="controladoria.png" />
-                    <SaibaMais onClick={() => setModule("subModules")}>
+                    <h2>Crédito e Cobrança</h2>
+                    <img src="/controladoria.png" />
+                    <SaibaMais onClick={goToCredit}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
-                    <h2>Distribuição</h2>
-                    <img src="distribuicao.png" />
+                    <h2>Custeio</h2>
+                    <img src="/custeio.png" />
                     <SaibaMais onClick={goToDistribution}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
-                    <h2>Faturamento</h2>
-                    <img src="faturamento.png" />
-                    <SaibaMais onClick={goToInvoicing}>
+                    <h2>Departamento Financeiro</h2>
+                    <img src="dep_financeiro.png" />
+                    <SaibaMais onClick={goToFinanceDepartament}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
-                    <h2>Gerenciamento de Vendas</h2>
-                    <img src="vendas.png" />
-                    <SaibaMais onClick={goToSalesManagement}>
+                    <h2>Departamento Fiscal</h2>
+                    <img src="fiscal.png" />
+                    <SaibaMais onClick={goToTaxDepartament}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
-                    <h2>Marketing</h2>
-                    <img src="marketing.png" />
-                    <SaibaMais onClick={goToMarketing}>
-                        Saiba Mais
-                    </SaibaMais>
-                </Card>
-                <Card>
-                    <h2>Produção</h2>
-                    <img src="producao.png" />
-                    <SaibaMais onClick={goToProduction}>
-                        Saiba Mais
-                    </SaibaMais>
-                </Card>
-                <Card>
-                    <h2>Laboratório</h2>
-                    <img src="laboratorio.png" />
-                    <SaibaMais onClick={goToLab}>
+                    <h2>Orçamento</h2>
+                    <img src="orcamento.png" />
+                    <SaibaMais onClick={goToBudget}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>

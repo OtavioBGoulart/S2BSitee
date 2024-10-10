@@ -1,21 +1,28 @@
 import styled from "styled-components";
 import { Modules } from "./modules";
 import { useState } from "react";
-
+import { CSubModules } from "./controllership-subModules";
 export function Neoagro() {
 
     const [module, setModule] = useState("module");
-
     return (
         <Container>
             <Title>
-                <img src="neoagro.png" />
-                <span>O ERP neOagro é um software de gestão empresarial sob medida que atende à todas as demandas gerenciais e operacionais de uma empresa. Contribuindo e controlando com relatórios precisos e processos a sua evolução.</span>
+                <img src="neoagro.png" alt="Neoagro Logo" />
+                <span>
+                    O ERP neOagro é um software de gestão empresarial sob medida que atende às
+                    todas as demandas gerenciais e operacionais de uma empresa. Contribuindo e
+                    controlando com relatórios precisos e processos a sua evolução.
+                </span>
             </Title>
-            {module === "module" ? <Modules setModule={setModule} />
-                : null}
+
+            {module === "module" ? (
+                <Modules setModule={setModule} />
+            ) : module === "subModules" ? (
+                <CSubModules />
+            ) : null}
         </Container>
-    )
+    );
 }
 
 const Container = styled.div`
@@ -32,6 +39,7 @@ const Title = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-bottom: 20px;
 
     img {
         width: 250px;
