@@ -1,14 +1,14 @@
 import { ArrowLeft } from "lucide-react";
 import styled from "styled-components";
-import { ModulesProps } from "../modules";
 import { useNavigation } from "../../../hooks/useNavigation";
 
-export function Accounting({ setModule }: ModulesProps) {
+
+
+export function Accounting() {
 
     const { goToNeoagro } = useNavigation();
 
     function BackToControllerShip() {
-        setModule("subModules")
         goToNeoagro();
     }
 
