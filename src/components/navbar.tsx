@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useNavigation } from "../hooks/useNavigation";
+import { useState } from "react";
 
 type SubmenuType = "solutions" | "about" | "contacts" | null;
 
