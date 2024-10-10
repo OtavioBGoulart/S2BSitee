@@ -186,7 +186,7 @@ export function Form() {
 
 
 const Container = styled.div`
-    height: auto; 
+    min-height: 900px;
     width: 100%;
     display: flex;
     padding: 20px 20px;

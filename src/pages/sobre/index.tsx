@@ -28,7 +28,7 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary.lighter};
   display: flex;
   justify-content: center;
-  min-height: 500px;
+  min-height: 800px;
   padding: 20px 20px;
 `;
 

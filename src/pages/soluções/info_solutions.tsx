@@ -67,6 +67,7 @@ const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    gap: 10px;
     /* border: 1px solid white; */
     /* border: 20px;
     background-color: ${({ theme }) => theme.colors.secondary.lighter}; */
@@ -89,9 +90,9 @@ const Card = styled.div`
 
     span {
     font-family: ${({ theme }) => theme.fonts.content};
-    color: ${({ theme }) => theme.colors.secondary.dark};
+    color: ${({ theme }) => theme.colors.primary.light};
     font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 500;
+    font-weight: 800;
     margin-bottom: 20px;
     text-align: center;
     }

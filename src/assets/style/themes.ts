@@ -12,6 +12,12 @@ export const theme: DefaultTheme = {
             lighter: 'white',
             dark: 'gray',
             default: '#d1d1d1',
+        },
+        terciary: {
+            light: '#007d64',
+            lighter: '#66d1b3',
+            dark: 'gray',
+            default: '#d1d1d1',
         }
     },
     fonts: {

@@ -48,9 +48,8 @@ const Div = styled.div`
     display: flex;
     justify-content: center;
     background: linear-gradient(90deg, 
-    ${({ theme }) => theme.colors.primary.light}, 
-    #2a4f78,
-    ${({ theme }) => theme.colors.primary.lighter}
+    ${({ theme }) => theme.colors.terciary.light}, 
+    ${({ theme }) => theme.colors.terciary.lighter}
   ); 
 `
 const Container = styled.div`
@@ -59,7 +58,7 @@ const Container = styled.div`
     padding-bottom: 30px;
 
     h1 {
-        color: ${({ theme }) => theme.colors.secondary.light};
+        color: ${({ theme }) => theme.colors.secondary.lighter};
         font-size: ${({ theme }) => theme.fontSizes.xlarge};
         font-family: ${({ theme }) => theme.fonts.main};
         font-weight: 800;
@@ -100,7 +99,7 @@ const Card = styled.div`
     transition: transform 0.2s ease-in-out box-shadow 0.2s ease-in-out;
 
     h2 {
-        color: ${({ theme }) => theme.colors.primary.light};
+        color: ${({ theme }) => theme.colors.terciary.light};
         font-family: ${({ theme }) => theme.fonts.content};
         font-size: ${({ theme }) => theme.fontSizes.xmedium};
         margin-bottom: 20px;
@@ -134,7 +133,7 @@ const SaibaMais = styled.button`
     font-family: ${({ theme }) => theme.fonts.main};
     font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 600;
-    background-color: ${({ theme }) => theme.colors.primary.lighter};
+    background-color: ${({ theme }) => theme.colors.terciary.lighter};
     color: ${({ theme }) => theme.colors.secondary.lighter};
     margin-top: 20px; 
     align-self: center;
