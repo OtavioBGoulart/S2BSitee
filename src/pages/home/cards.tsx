@@ -132,5 +132,6 @@ const MainContainer = styled.div`
         color: ${({ theme }) => theme.colors.secondary.dark};
         font-weight: 600;
         margin-bottom: 20px;
+        text-align: center;
     }
 `
