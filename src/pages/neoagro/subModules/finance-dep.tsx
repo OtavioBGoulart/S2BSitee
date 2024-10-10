@@ -1,39 +1,60 @@
 import styled from "styled-components";
+import { ModulesProps } from "../modules";
+import { ArrowLeft } from "lucide-react";
+import { useNavigation } from "../../../hooks/useNavigation";
 
-export function Production() {
+export function FinDep({ setModule }: ModulesProps) {
+
+    const { goToNeoagro } = useNavigation();
+
+    function BackToControllerShip() {
+        goToNeoagro();
+        setModule("subModules")
+    }
 
     return (
         <Container>
-            <h1>Módulo de Produção</h1>
+            <Header />
+            <ArrowLeft onClick={BackToControllerShip} />
+            <h1>SubMódulo de Departamento Financeiro</h1>
+            <Header />
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
                         <img src="/software.png" />
-                        <span>Controle de Contratos</span>
+                        <span>Controle de Adiantamentos Cliente/Fornecedores</span>
                     </Card>
                     <Card>
                         <img src="/iot.png" />
-                        <span>Emissão de Etiquetas</span>
+                        <span>Controle Recebimento Clientes</span>
                     </Card>
                     <Card>
                         <img src="/business-intelligence.png" />
-                        <span>Controle Posição do Estoque</span>
+                        <span>Controle de Títulos a Vencer e Vencidos</span>
                     </Card>
                     <Card>
                         <img src="/fita-metrica.png" />
-                        <span>Controle Produção e Beneficiamento</span>
+                        <span>Controle de Recebimentos em Cheques Pré-Datados</span>
                     </Card>
                     <Card>
                         <img src="/melhoria.png" />
-                        <span>Controle Processo de Análise e Checagem</span>
+                        <span>Geração de Arquivos para Pagamentos de Fornecedores</span>
                     </Card>
                     <Card>
                         <img src="/melhoria.png" />
-                        <span>Controle de Tickets de Entrada</span>
+                        <span>Controle das Movimentações Financeira e Bancárias</span>
                     </Card>
                     <Card>
                         <img src="/melhoria.png" />
-                        <span>Controle de Passagem</span>
+                        <span>Controle de Pagamentos a Fornecedores</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Controle e Baixa de Recebimentos de Títulos de Clientes</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Geração de Fatura de Várias Duplicatas</span>
                     </Card>
                 </CardsContainer>
             </ProductsContainer>
@@ -45,12 +66,38 @@ const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 10px ;
     min-height: 500px;
+    position: relative;
 
     h1 {
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
     }
 `
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+
+    svg { /* Estilo para o ícone */
+        position: absolute; /* Coloca a seta em uma posição fixa */
+        left: 20px; /* Ajuste a posição da seta conforme necessário */
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: ${({ theme }) => theme.fontSizes.large};
+        }
+    }
+`;
+
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -88,7 +135,6 @@ const Card = styled.div`
 
     @media (max-width: 900px) {
         flex-direction: row;
-        justify-content: space-evenly  ;
         width: 100%;
 
     

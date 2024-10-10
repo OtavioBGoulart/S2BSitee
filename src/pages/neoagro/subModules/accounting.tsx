@@ -1,31 +1,52 @@
+import { ArrowLeft } from "lucide-react";
 import styled from "styled-components";
+import { ModulesProps } from "../modules";
+import { useNavigation } from "../../../hooks/useNavigation";
 
-export function Invoicing() {
+export function Accounting({ setModule }: ModulesProps) {
+
+    const { goToNeoagro } = useNavigation();
+
+    function BackToControllerShip() {
+        setModule("subModules")
+        goToNeoagro();
+    }
 
     return (
         <Container>
-            <h1>Módulo de Faturamento</h1>
+            <Header>
+                <ArrowLeft onClick={BackToControllerShip} />
+                <h1>SubMódulo de Contabilidade</h1>
+            </Header>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
                         <img src="/software.png" />
-                        <span>Controle de Pedidos a Faturar</span>
+                        <span>Lançamentos Contábeis (Manual e Automático)</span>
                     </Card>
                     <Card>
                         <img src="/iot.png" />
-                        <span>Emissão do Orçamento de Vendas</span>
+                        <span>Controle Deprecicação Imobilizado</span>
                     </Card>
                     <Card>
                         <img src="/business-intelligence.png" />
-                        <span>Emissão de NFe</span>
+                        <span>Encerramento Exercício Mensal/Trimestral ou Anual</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
-                        <span>Emissão de CTe</span>
+                        <img src="/fita-metrica.png" />
+                        <span>Apuração do SPED Contábil</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
-                        <span>Emissão de MDFe</span>
+                        <img src="/melhoria.png" />
+                        <span>Importação arquivos de Folhas de Pgamento de Terceiros</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Gestão de Périodos por Tipo de Movimentação </span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Integração contábil de forma automática</span>
                     </Card>
                 </CardsContainer>
             </ProductsContainer>
@@ -37,12 +58,39 @@ const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 10px ;
     min-height: 500px;
+    position: relative;
 
     h1 {
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
     }
 `
+
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+
+    svg { /* Estilo para o ícone */
+        position: absolute; /* Coloca a seta em uma posição fixa */
+        left: 20px; /* Ajuste a posição da seta conforme necessário */
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: ${({ theme }) => theme.fontSizes.large};
+        }
+    }
+`;
+
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -80,7 +128,6 @@ const Card = styled.div`
 
     @media (max-width: 900px) {
         flex-direction: row;
-        justify-content: space-evenly  ;
         width: 100%;
 
     

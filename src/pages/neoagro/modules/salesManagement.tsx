@@ -1,23 +1,35 @@
 import styled from "styled-components";
 
-export function Distribution() {
+export function SalesManagement() {
 
     return (
         <Container>
-            <h1>Módulo de distribuição</h1>
+            <h1>Módulo de Gerenciamento de Vendas</h1>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
                         <img src="/software.png" />
-                        <span>Montagem de Carga</span>
+                        <span>Cadastro de Clientes/Trasnportador/Fornecedores</span>
                     </Card>
                     <Card>
                         <img src="/iot.png" />
-                        <span>Cadastro de Veículos e Controle de Frota</span>
+                        <span>Controle de Ordem de Carregamento</span>
                     </Card>
                     <Card>
                         <img src="/business-intelligence.png" />
-                        <span>Controle de Entrega de Carga</span>
+                        <span>Controle de Pedido de Vendas</span>
+                    </Card>
+                    <Card>
+                        <img src="/fita-metrica.png" />
+                        <span>Controle de Comissão</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Controle de Cotas</span>
+                    </Card>
+                    <Card>
+                        <img src="/melhoria.png" />
+                        <span>Controle Representante Comercial</span>
                     </Card>
                 </CardsContainer>
             </ProductsContainer>
@@ -72,9 +84,8 @@ const Card = styled.div`
 
     @media (max-width: 900px) {
         flex-direction: row;
-        justify-content: space-evenly  ;
         width: 100%;
-
+        gap: 15px
     
     };
 

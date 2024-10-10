@@ -19,7 +19,7 @@ export function Neoagro() {
             {module === "module" ? (
                 <Modules setModule={setModule} />
             ) : module === "subModules" ? (
-                <CSubModules />
+                <CSubModules setModule={setModule} />
             ) : null}
         </Container>
     );

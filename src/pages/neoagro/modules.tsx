@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigation } from "../../hooks/useNavigation";
 
-interface ModulesProps {
+export interface ModulesProps {
     setModule: (moduleName: string) => void;
 }
 

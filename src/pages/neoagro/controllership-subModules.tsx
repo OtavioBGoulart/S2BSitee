@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { useNavigation } from "../../hooks/useNavigation";
+import { ArrowLeft } from "lucide-react";
+import { ModulesProps } from "./modules";
 
 
 
-export function CSubModules() {
+export function CSubModules({ setModule }: ModulesProps) {
 
     const { goToCredit, goToBudget, goToAccounting, goToFinanceDepartament
         , goToTaxDepartament, goToDistribution
@@ -11,7 +13,10 @@ export function CSubModules() {
 
     return (
         <Container>
-            <h1>Submódulos da Controladoria</h1>
+            <Header>
+                <ArrowLeft onClick={() => setModule("module")} />
+                <h1>Submódulos da Controladoria</h1>
+            </Header>
             <CardContainer>
                 <Card>
                     <h2>Contabilidade</h2>
@@ -64,6 +69,7 @@ const Container = styled.div`
     width: 80%;
     padding-top: 20px;
     padding-bottom: 15px;
+    position: relative;
 
     h1 {
         font-size: ${({ theme }) => theme.fontSizes.xlarge};
@@ -76,6 +82,31 @@ const Container = styled.div`
        h1 {
         font-size: ${({ theme }) => theme.fontSizes.large};
        }
+    }
+`;
+
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+
+    svg { /* Estilo para o ícone */
+        position: absolute; /* Coloca a seta em uma posição fixa */
+        left: 20px; /* Ajuste a posição da seta conforme necessário */
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: ${({ theme }) => theme.fontSizes.large};
+        }
     }
 `;
 

@@ -1,31 +1,32 @@
 import styled from "styled-components";
+import { ModulesProps } from "../modules";
+import { ArrowLeft } from "lucide-react";
+import { useNavigation } from "../../../hooks/useNavigation";
 
-export function Lab() {
+export function Credit({ setModule }: ModulesProps) {
+
+    const { goToNeoagro } = useNavigation();
+
+    function BackToControllerShip() {
+        goToNeoagro();
+        setModule("subModules")
+    }
 
     return (
         <Container>
-            <h1>Módulo de laboratório</h1>
+            <Header>
+                <ArrowLeft onClick={BackToControllerShip} />
+                <h1>SubMódulo Crédito e cobrança</h1>
+            </Header>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
                         <img src="/software.png" />
-                        <span>Controle Atestado de Garantia</span>
+                        <span>Definição de Regras de Apuração do Custeio</span>
                     </Card>
                     <Card>
                         <img src="/iot.png" />
-                        <span>Controle Boletim de Análise</span>
-                    </Card>
-                    <Card>
-                        <img src="/business-intelligence.png" />
-                        <span>Ficha de Análise de Produto</span>
-                    </Card>
-                    <Card>
-                        <img src="/fita-metrica.png" />
-                        <span>Controle de Qualidade do Produto</span>
-                    </Card>
-                    <Card>
-                        <img src="/melhoria.png" />
-                        <span>Testes avulsos de Laboratório</span>
+                        <span>Apuração e Controle do Rateio de Custo</span>
                     </Card>
                 </CardsContainer>
             </ProductsContainer>
@@ -37,12 +38,38 @@ const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 10px ;
     min-height: 500px;
+    position: relative;
 
     h1 {
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
     }
 `
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+
+    svg { /* Estilo para o ícone */
+        position: absolute; /* Coloca a seta em uma posição fixa */
+        left: 20px; /* Ajuste a posição da seta conforme necessário */
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: ${({ theme }) => theme.fontSizes.large};
+        }
+    }
+`;
+
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -80,7 +107,6 @@ const Card = styled.div`
 
     @media (max-width: 900px) {
         flex-direction: row;
-        justify-content: space-evenly  ;
         width: 100%;
 
     

@@ -1,35 +1,32 @@
 import styled from "styled-components";
+import { ModulesProps } from "../modules";
+import { ArrowLeft } from "lucide-react";
+import { useNavigation } from "../../../hooks/useNavigation";
 
-export function SalesManagement() {
+export function Budget({ setModule }: ModulesProps) {
+
+    const { goToNeoagro } = useNavigation();
+
+    function BackToControllerShip() {
+        goToNeoagro();
+        setModule("subModules")
+    }
 
     return (
         <Container>
-            <h1>Módulo de Gerenciamento de Vendas</h1>
+            <Header>
+                <ArrowLeft onClick={BackToControllerShip} />
+                <h1>SubMódulo Orçamento</h1>
+            </Header>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
                         <img src="/software.png" />
-                        <span>Cadastro de Clientes/Trasnportador/Fornecedores</span>
+                        <span>Definição e Liberação de Centro de Custo por Conta Contábil</span>
                     </Card>
                     <Card>
                         <img src="/iot.png" />
-                        <span>Controle de Ordem de Carregamento</span>
-                    </Card>
-                    <Card>
-                        <img src="/business-intelligence.png" />
-                        <span>Controle de Pedido de Vendas</span>
-                    </Card>
-                    <Card>
-                        <img src="/fita-metrica.png" />
-                        <span>Controle de Comissão</span>
-                    </Card>
-                    <Card>
-                        <img src="/melhoria.png" />
-                        <span>Controle de Cotas</span>
-                    </Card>
-                    <Card>
-                        <img src="/melhoria.png" />
-                        <span>Controle Representante Comercial</span>
+                        <span>Geração de Acompanhamento de Orçamento</span>
                     </Card>
                 </CardsContainer>
             </ProductsContainer>
@@ -41,12 +38,39 @@ const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 10px ;
     min-height: 500px;
+    position: relative;
 
     h1 {
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
     }
 `
+
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+
+    svg { /* Estilo para o ícone */
+        position: absolute; /* Coloca a seta em uma posição fixa */
+        left: 20px; /* Ajuste a posição da seta conforme necessário */
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: ${({ theme }) => theme.fontSizes.large};
+        }
+    }
+`;
+
 const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
