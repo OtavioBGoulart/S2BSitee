@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigation } from "../hooks/useNavigation";
 
