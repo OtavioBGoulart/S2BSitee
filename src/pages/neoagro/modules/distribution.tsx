@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Container, CardsContainer, ProductsContainer, Card } from "./buy";
 
 export function Distribution() {
