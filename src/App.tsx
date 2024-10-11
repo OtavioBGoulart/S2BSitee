@@ -21,7 +21,7 @@ import { Costing } from "./pages/neoagro/subModules/costing";
 import { FinDep } from "./pages/neoagro/subModules/finance-dep";
 import { TaxDep } from "./pages/neoagro/subModules/tax-dep";
 import { Budget } from "./pages/neoagro/subModules/budget";
-import { Credito } from "./pages/neoagro/subModules/credit";
+import { Credit } from "./pages/neoagro/subModules/Credit";
 
 
 const router = createBrowserRouter([
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
         element: <Compras />
       },
       {
-        path: "/neoagro/controladoria/contabilidade",
-        element: <Accounting />
+        path: "/neoagro/controladoria/credito-e-cobranca",
+        element: <Credit />
       },
       {
-        path: "/neoagro/controladoria/credito-e-cobranca",
-        element: <Credito />
+        path: "/neoagro/controladoria/contabilidade",
+        element: <Accounting />
       },
       {
         path: "/neoagro/controladoria/custeio",
