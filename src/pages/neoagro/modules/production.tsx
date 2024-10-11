@@ -1,10 +1,12 @@
-import { Container, CardsContainer, ProductsContainer, Card } from "./buy";
+import { Container, CardsContainer, ProductsContainer, Card, Header } from "./buy";
 
 export function Production() {
 
     return (
         <Container>
-            <h1>Módulo de Produção</h1>
+            <Header>
+                <h1>Módulo de Produção</h1>
+            </Header>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>

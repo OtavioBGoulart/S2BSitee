@@ -17,7 +17,7 @@ import { Lab } from "./pages/neoagro/modules/lab";
 import { Production } from "./pages/neoagro/modules/production";
 import { SalesManagement } from "./pages/neoagro/modules/salesManagement";
 import { Accounting } from "./pages/neoagro/subModules/accounting";
-import { Credit } from "./pages/neoagro/subModules/Credit";
+import { Credit } from "./pages/neoagro/subModules/credit";
 import { Costing } from "./pages/neoagro/subModules/costing";
 import { FinDep } from "./pages/neoagro/subModules/finance-dep";
 import { TaxDep } from "./pages/neoagro/subModules/tax-dep";

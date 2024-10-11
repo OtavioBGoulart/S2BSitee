@@ -4,27 +4,29 @@ export function Compras() {
 
     return (
         <Container>
-            <h1>Módulo de compras</h1>
+            <Header>
+                <h1>Módulo de compras</h1>
+            </Header>
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/buys_icons/controle-req-comp.png" />
+                        <img src="/buys-icons/controle-req-comp.png" />
                         <span>Controle de requisição de compra</span>
                     </Card>
                     <Card>
-                        <img src="/buys_icons/perfil-de-alcadas.png" />
+                        <img src="/buys-icons/perfil-de-alcadas.png" />
                         <span>Perfil de alçadas por centro de custo e valores</span>
                     </Card>
                     <Card>
-                        <img src="/buys_icons/cotacao.png" />
+                        <img src="/buys-icons/cotacao.png" />
                         <span>Cotação de compras via Arquivo</span>
                     </Card>
                     <Card>
-                        <img src="/buys_icons/importacao-de-arquivo.png" />
+                        <img src="/buys-icons/importacao-de-arquivo.png" />
                         <span>Importação de arquivo de cotação</span>
                     </Card>
                     <Card>
-                        <img src="/buys_icons/monitoramento-compras.png" />
+                        <img src="/buys-icons/monitoramento-compras.png" />
                         <span>Monitoramento de compras</span>
                     </Card>
                 </CardsContainer>
@@ -38,11 +40,23 @@ export const Container = styled.div`
     border-radius: 10px ;
     min-height: 800px;
 
+`
+
+export const Header = styled.div`
+    height: 150px;
+    background: linear-gradient(90deg, 
+    ${({ theme }) => theme.colors.primary.light}, 
+    #2a4f78,
+    ${({ theme }) => theme.colors.primary.lighter}
+  );
+    margin: auto 0;
+    
 
     h1 {
-        color: ${({ theme }) => theme.colors.secondary.dark};
+        color: ${({ theme }) => theme.colors.secondary.light};
         text-align: center;
     }
+
 `
 export const ProductsContainer = styled.div`
   display: flex;

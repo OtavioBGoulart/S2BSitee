@@ -8,7 +8,7 @@ export function Home() {
     return (
         <MainContainer>
             <Banner>
-                <img src="s2bbanner.png" />
+                <img src="/marca-images/s2bbanner.png" />
             </Banner>
             <Cards />
             <Erp />

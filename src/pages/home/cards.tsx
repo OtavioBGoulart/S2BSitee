@@ -11,27 +11,27 @@ export function Cards() {
             <CardsContainer>
                 <Card>
                     <span>Integrações</span>
-                    <img src="integracao.png" />
+                    <img src="/home-icons/integracao.png" />
                 </Card>
                 <Card>
                     <span>Segurança</span>
-                    <img src="seguranca.png" />
+                    <img src="/home-icons/seguranca.png" />
                 </Card>
                 <Card>
                     <span>Escalabilidade</span>
-                    <img src="grafico-de-barras.png" />
+                    <img src="/home-icons/escalabilidade.png" />
                 </Card>
                 <Card>
                     <span>Relatórios</span>
-                    <img src="relatorio.png" />
+                    <img src="/home-icons/relatorio.png" />
                 </Card>
                 <Card>
                     <span>Confiabilidade</span>
-                    <img src="confiabilidade.png" />
+                    <img src="/home-icons/confiabilidade.png" />
                 </Card>
                 <Card>
                     <span>Suporte</span>
-                    <img src="definicoes.png" />
+                    <img src="/home-icons/definicoes.png" />
                 </Card>
             </CardsContainer>
             {/* <MoreInfo>

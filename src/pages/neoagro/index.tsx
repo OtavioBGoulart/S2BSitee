@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Modules } from "./modules";
 import { useState } from "react";
-import { CSubModules } from "./controllership-subModules";
+import { CSubModules } from "../../../public/subModules-icons/controllership/controllership-subModules";
 import { AreasAtuação } from "./areas-atuação";
 export function Neoagro() {
 
@@ -9,7 +9,7 @@ export function Neoagro() {
     return (
         <Container>
             <Title>
-                <img src="neoagro.bmp" alt="Neoagro Logo" />
+                <img src="/marca-images/neoagro.bmp" alt="Neoagro Logo" />
                 <span>
                     O ERP neOagro é um software de gestão empresarial sob medida que atende às
                     todas as demandas gerenciais e operacionais de uma empresa. Contribuindo e

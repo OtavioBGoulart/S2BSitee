@@ -6,27 +6,27 @@ export function Info() {
         <ProductsContainer>
             <CardsContainer>
                 <Card>
-                    <img src="software.png" />
+                    <img src="/solutionsPage-icons/software.png" />
                     <span>Sistema de Gestão para Agronegócio (neOagro)</span>
                 </Card>
                 <Card>
-                    <img src="iot.png" />
+                    <img src="/solutionsPage-icons/iot.png" />
                     <span>Inovação Agro IoT</span>
                 </Card>
                 <Card>
-                    <img src="business-intelligence.png" />
+                    <img src="/solutionsPage-icons/business-intelligence.png" />
                     <span>Serviços de Consultoria e Soluções em Business Intelligence (BI)</span>
                 </Card>
                 <Card>
-                    <img src="fita-metrica.png" />
+                    <img src="/solutionsPage-icons/fita-metrica.png" />
                     <span>Desenvolvimento de soluções  sob medida</span>
                 </Card>
                 <Card>
-                    <img src="melhoria.png" />
+                    <img src="/solutionsPage-icons/melhoria.png" />
                     <span>Consultoria em Análise e Melhoria de Processos</span>
                 </Card>
                 <Card>
-                    <img src="infra.png" />
+                    <img src="/solutionsPage-icons/infra.png" />
                     <span>Serviços de Gerenciamento de TI em Geral</span>
                 </Card>
             </CardsContainer>

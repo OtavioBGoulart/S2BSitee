@@ -12,7 +12,7 @@ export function Erp() {
                 <CardContainer>
                     <Card>
                         <h2>Foco no cliente</h2>
-                        <img src="foco.png" />
+                        <img src="/home-icons/foco.png" />
                         <span>Estamos sempre próximos dos nossos clientes, mantendo linhas de comunicação ágeis.
                             Isso torna o processo de criação mais eficiente, permitindo que entreguemos soluções de forma rápida e eficaz.
                         </span>
@@ -22,7 +22,7 @@ export function Erp() {
                     </Card>
                     <Card>
                         <h2>Ambientes Exigentes</h2>
-                        <img src="ambiente.png" />
+                        <img src="/home-icons/ambiente.png" />
                         <span>Desenvolvemos sistemas para empresas multinacionais no Brasil, utilizados por centenas de usuários,
                             sempre em conformidade com as rigorosas exigências das auditorias internacionais.
                         </span>
@@ -32,7 +32,7 @@ export function Erp() {
                     </Card>
                     <Card>
                         <h2>Inovação</h2>
-                        <img src="ideia.png" />
+                        <img src="/home-icons/ideia.png" />
                         <span>Acreditamos que, no agronegócio, assim como em qualquer setor, é essencial promover a transparência no processo produtivo. Isso é feito por meio do registro automático de dados com tecnologia inovadora (IoT), minimizando a interferência humana sempre que possível.
                             Essa transparência e rastreabilidade são cruciais para compreender o processo e estabelecer pontos de medição eficazes.
                         </span>

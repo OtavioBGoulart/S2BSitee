@@ -15,7 +15,7 @@ export function Navbar() {
     return (
         <Container>
             <Header>
-                <img src="/logos2b.svg" onClick={goHome} />
+                <img src="/marca-images/logos2b.svg" onClick={goHome} />
                 <div>
                     <NavItem onClick={goHome}>Home</NavItem>
 

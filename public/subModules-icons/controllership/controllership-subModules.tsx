@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { useNavigation } from "../../hooks/useNavigation";
+import { useNavigation } from "../../../src/hooks/useNavigation";
 import { ArrowLeft } from "lucide-react";
-import { ModulesProps } from "./modules";
+import { ModulesProps } from "../../../src/pages/neoagro/modules";
 
 
 
 export function CSubModules({ setModule }: ModulesProps) {
 
     const { goToCredit, goToBudget, goToAccounting, goToFinanceDepartament
-        , goToTaxDepartament, goToDistribution
+        , goToTaxDepartament, goToCosting
     } = useNavigation();
 
     return (
@@ -20,42 +20,42 @@ export function CSubModules({ setModule }: ModulesProps) {
             <CardContainer>
                 <Card>
                     <h2>Contabilidade</h2>
-                    <img src="grafico-de-barras.png" />
+                    <img src="/subModules-icons/controllership/contabilidade.png" />
                     <SaibaMais onClick={goToAccounting}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Crédito e Cobrança</h2>
-                    <img src="/controladoria.png" />
+                    <img src="/subModules-icons/controllership/controladoria.png" />
                     <SaibaMais onClick={goToCredit}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Custeio</h2>
-                    <img src="/custeio.png" />
-                    <SaibaMais onClick={goToDistribution}>
+                    <img src="/subModules-icons/controllership/custeio.png" />
+                    <SaibaMais onClick={goToCosting}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Departamento Financeiro</h2>
-                    <img src="dep_financeiro.png" />
+                    <img src="/subModules-icons/controllership/dep_financeiro.png" />
                     <SaibaMais onClick={goToFinanceDepartament}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Departamento Fiscal</h2>
-                    <img src="fiscal.png" />
+                    <img src="/subModules-icons/controllership/dep_fiscal.png" />
                     <SaibaMais onClick={goToTaxDepartament}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Orçamento</h2>
-                    <img src="orcamento.png" />
+                    <img src="/subModules-icons/controllership/orcamento.png" />
                     <SaibaMais onClick={goToBudget}>
                         Saiba Mais
                     </SaibaMais>

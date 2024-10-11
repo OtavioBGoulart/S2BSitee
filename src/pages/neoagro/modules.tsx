@@ -17,56 +17,56 @@ export function Modules({ setModule }: ModulesProps) {
             <CardContainer>
                 <Card>
                     <h2>Compras</h2>
-                    <img src="compras.png" />
+                    <img src="/modules-icons/compras.png" />
                     <SaibaMais onClick={goTobuys}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Controladoria</h2>
-                    <img src="controladoria.png" />
+                    <img src="/modules-icons/controladoria.png" />
                     <SaibaMais onClick={() => setModule("subModules")}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Distribuição</h2>
-                    <img src="distribuicao.png" />
+                    <img src="/modules-icons/distribuicao.png" />
                     <SaibaMais onClick={goToDistribution}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Faturamento</h2>
-                    <img src="faturamento.png" />
+                    <img src="/modules-icons/faturamento.png" />
                     <SaibaMais onClick={goToInvoicing}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Gerenciamento de Vendas</h2>
-                    <img src="vendas.png" />
+                    <img src="/modules-icons/vendas.png" />
                     <SaibaMais onClick={goToSalesManagement}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Marketing</h2>
-                    <img src="marketing.png" />
+                    <img src="/modules-icons/marketing.png" />
                     <SaibaMais onClick={goToMarketing}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Produção</h2>
-                    <img src="producao.png" />
+                    <img src="/modules-icons/producao.png" />
                     <SaibaMais onClick={goToProduction}>
                         Saiba Mais
                     </SaibaMais>
                 </Card>
                 <Card>
                     <h2>Laboratório</h2>
-                    <img src="laboratorio.png" />
+                    <img src="/modules-icons/laboratorio.png" />
                     <SaibaMais onClick={goToLab}>
                         Saiba Mais
                     </SaibaMais>
