@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { useNavigation } from "../hooks/useNavigation";
 import { useState } from "react";
+import { Menu } from "lucide-react";
 
-type SubmenuType = "solutions" | "about" | "contacts" | null;
+type SubmenuType = "solutions" | "about" | "contacts" | "mobile" | null;
 
 export function Navbar() {
     const { goToSolutions, goHome, goAbout, goToContacts, goToNeoagro } = useNavigation();
@@ -10,6 +11,7 @@ export function Navbar() {
 
     function handleSubmenuToggle(menu: SubmenuType) {
         setOpenSubmenu(menu === openSubmenu ? null : menu);
+        console.log(menu)
     };
 
     return (
@@ -44,6 +46,20 @@ export function Navbar() {
                     <NavItem onClick={goToContacts}>Contato</NavItem>
                 </div>
             </Header>
+
+            {/* Ícone do menu mobile */}
+            <MenuItem>
+                <Menu onClick={() => handleSubmenuToggle("mobile")} />
+                {openSubmenu === "mobile" && (
+                    <MobileMenu>
+                        <SubmenuItem onClick={goHome}>Home</SubmenuItem>
+                        <SubmenuItem onClick={goToNeoagro}>ERP Neoagro</SubmenuItem>
+                        <SubmenuItem onClick={goToSolutions}>Business Intelligence</SubmenuItem>
+                        <SubmenuItem onClick={goAbout}>Sobre</SubmenuItem>
+                        <SubmenuItem onClick={goToContacts}>Contato</SubmenuItem>
+                    </MobileMenu>
+                )}
+            </MenuItem>
         </Container>
     );
 }
@@ -66,7 +82,7 @@ const Header = styled.div`
         gap: 20px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
         width: 100%;
         justify-content: center;
 
@@ -78,7 +94,8 @@ const Header = styled.div`
 
 const Container = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     height: 90px;
     width: 100%;
     background-color: ${({ theme }) => theme.colors.secondary.light};
@@ -124,4 +141,35 @@ const SubmenuItem = styled.span`
         border-radius: 10px;
         color: ${({ theme }) => theme.colors.primary.light};
     }
+`;
+
+const MenuItem = styled.div`
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    svg {
+        width: 30px;    
+        height: 30px;
+        fill: ${({ theme }) => theme.colors.primary.light};
+    }
+`;
+
+// Submenu para dispositivos móveis
+const MobileMenu = styled.div`
+    position: absolute;
+    top: 20;
+    right: 15px;
+    background-color: ${({ theme }) => theme.colors.primary.light};
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 200px;
 `;
