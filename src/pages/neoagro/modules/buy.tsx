@@ -100,8 +100,8 @@ export const Card = styled.div`
 
     span {
     font-family: ${({ theme }) => theme.fonts.content};
-    color: ${({ theme }) => theme.colors.primary.light};
-    font-size: ${({ theme }) => theme.fontSizes.xmedium};
+    color: ${({ theme }) => theme.colors.secondary.dark};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
