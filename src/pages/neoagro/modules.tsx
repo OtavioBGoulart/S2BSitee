@@ -82,7 +82,7 @@ const Container = styled.div`
     padding-bottom: 15px;
 
     h1 {
-        font-size: ${({ theme }) => theme.fontSizes.xlarge};
+        font-size: ${({ theme }) => theme.fontSizes.large};
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
         margin-bottom: 40px;

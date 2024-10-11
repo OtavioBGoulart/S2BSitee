@@ -33,27 +33,33 @@ export function Compras() {
     )
 }
 
-const Container = styled.div`
+export const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.lighter};
     border-radius: 10px ;
-    min-height: 500px;
+    min-height: 800px;
+
 
     h1 {
         color: ${({ theme }) => theme.colors.secondary.dark};
         text-align: center;
     }
 `
-const ProductsContainer = styled.div`
+export const ProductsContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+
+  @media( max-width: 900px) {
+    margin-top: 15px;
+  }
 `
 
-const CardsContainer = styled.div`
+export const CardsContainer = styled.div`
     width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 35px;
     justify-content: space-between;
 
     @media (max-width: 900px) {
@@ -63,15 +69,14 @@ const CardsContainer = styled.div`
     };
 `
 
-const Card = styled.div`
+export const Card = styled.div`
     width: 30%;
-    height: 150px;
     max-height: 350px;
-    padding: 10px;
+    padding: 10px 0;
     border: none;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 10px;
     /* border: 1px solid white; */
     /* border: 20px;
@@ -79,8 +84,9 @@ const Card = styled.div`
     transition: transform 0.2 ease-in-out, box-shadow 0.2 ease-in-out;
 
     @media (max-width: 900px) {
-        flex-direction: row;
         width: 100%;
+        justify-content: flex-start;
+        gap: 20px
 
     
     };
@@ -94,9 +100,9 @@ const Card = styled.div`
 
     span {
     font-family: ${({ theme }) => theme.fonts.content};
-    color: ${({ theme }) => theme.colors.secondary.dark};
-    font-size: ${({ theme }) => theme.fontSizes.medium};
-    font-weight: 500;
+    color: ${({ theme }) => theme.colors.primary.light};
+    font-size: ${({ theme }) => theme.fontSizes.xmedium};
+    font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
     }
@@ -104,12 +110,5 @@ const Card = styled.div`
     img {
         width: 50px;
         height: 50px;
-
-        svg {
-            color: ${({ theme }) => theme.colors.secondary.lighter};
-        }
-
-        &:hover {
-        }
     }
 `

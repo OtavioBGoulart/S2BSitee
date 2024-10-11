@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Modules } from "./modules";
 import { useState } from "react";
 import { CSubModules } from "./controllership-subModules";
+import { AreasAtuação } from "./areas-atuação";
 export function Neoagro() {
 
     const [module, setModule] = useState("module");
@@ -15,6 +16,7 @@ export function Neoagro() {
                     controlando com relatórios precisos e processos a sua evolução.
                 </span>
             </Title>
+            <AreasAtuação />
 
             {module === "module" ? (
                 <Modules setModule={setModule} />
@@ -31,7 +33,7 @@ const Container = styled.div`
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0px;
 `
 
 const Title = styled.div`
@@ -44,5 +46,13 @@ const Title = styled.div`
     img {
         width: 250px;
         height: 100px;
+    }
+
+    span {
+        font-family: ${({ theme }) => theme.fonts.content};
+        color: ${({ theme }) => theme.colors.secondary.dark};
+        font-size: ${({ theme }) => theme.fontSizes.xmedium};
+        font-weight: 500;
+        text-align: justify;
     }
 `

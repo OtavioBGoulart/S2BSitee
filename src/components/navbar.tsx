@@ -120,7 +120,8 @@ const SubmenuItem = styled.span`
     cursor: pointer;
 
     &:hover {
-        background-color: ${({ theme }) => theme.colors.primary.lighter};
-        color: ${({ theme }) => theme.colors.secondary.lighter};
+        background-color: ${({ theme }) => theme.colors.secondary.light};
+        border-radius: 10px;
+        color: ${({ theme }) => theme.colors.primary.light};
     }
 `;
