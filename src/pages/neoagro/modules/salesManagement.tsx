@@ -8,27 +8,27 @@ export function SalesManagement() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/salesManager-icons/cadastro.png" />
                         <span>Cadastro de Clientes/Trasnportador/Fornecedores</span>
                     </Card>
                     <Card>
-                        <img src="/iot.png" />
+                        <img src="/salesManager-icons/ordem-carregamentos.png" />
                         <span>Controle de Ordem de Carregamento</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
+                        <img src="/salesManager-icons/controle-ped-vendas.png" />
                         <span>Controle de Pedido de Vendas</span>
                     </Card>
                     <Card>
-                        <img src="/fita-metrica.png" />
+                        <img src="/salesManager-icons/comissao.png" />
                         <span>Controle de Comissão</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/salesManager-icons/controle-cotas.png" />
                         <span>Controle de Cotas</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/salesManager-icons/vendedor.png" />
                         <span>Controle Representante Comercial</span>
                     </Card>
                 </CardsContainer>

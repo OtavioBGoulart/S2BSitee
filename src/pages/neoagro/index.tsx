@@ -9,7 +9,7 @@ export function Neoagro() {
     return (
         <Container>
             <Title>
-                <img src="neoagro.png" alt="Neoagro Logo" />
+                <img src="neoagro.bmp" alt="Neoagro Logo" />
                 <span>
                     O ERP neOagro é um software de gestão empresarial sob medida que atende às
                     todas as demandas gerenciais e operacionais de uma empresa. Contribuindo e
@@ -45,7 +45,7 @@ const Title = styled.div`
 
     img {
         width: 250px;
-        height: 100px;
+        height: 80px;
     }
 
     span {

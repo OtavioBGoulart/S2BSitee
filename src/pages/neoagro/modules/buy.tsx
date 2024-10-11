@@ -8,23 +8,23 @@ export function Compras() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/buys_icons/controle-req-comp.png" />
                         <span>Controle de requisição de compra</span>
                     </Card>
                     <Card>
-                        <img src="/iot.png" />
+                        <img src="/buys_icons/perfil-de-alcadas.png" />
                         <span>Perfil de alçadas por centro de custo e valores</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
+                        <img src="/buys_icons/cotacao.png" />
                         <span>Cotação de compras via Arquivo</span>
                     </Card>
                     <Card>
-                        <img src="/fita-metrica.png" />
+                        <img src="/buys_icons/importacao-de-arquivo.png" />
                         <span>Importação de arquivo de cotação</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/buys_icons/monitoramento-compras.png" />
                         <span>Monitoramento de compras</span>
                     </Card>
                 </CardsContainer>
@@ -59,8 +59,8 @@ export const CardsContainer = styled.div`
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 35px;
-    justify-content: space-between;
+    gap: 85px;
+    justify-content: space-evenly;
 
     @media (max-width: 900px) {
         flex-direction: column;
@@ -70,14 +70,14 @@ export const CardsContainer = styled.div`
 `
 
 export const Card = styled.div`
-    width: 30%;
+    width: 32%;
     max-height: 350px;
     padding: 10px 0;
     border: none;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: space-evenly;
+    gap: 5px;
     /* border: 1px solid white; */
     /* border: 20px;
     background-color: ${({ theme }) => theme.colors.secondary.lighter}; */

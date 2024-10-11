@@ -8,15 +8,15 @@ export function Distribution() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/distribuition_icons/montagem-cargas.png" />
                         <span>Montagem de Carga</span>
                     </Card>
                     <Card>
-                        <img src="/iot.png" />
+                        <img src="/distribuition_icons/cadastro-cargas.png" />
                         <span>Cadastro de Veículos e Controle de Frota</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
+                        <img src="/distribuition_icons/entrega-cargas.png" />
                         <span>Controle de Entrega de Carga</span>
                     </Card>
                 </CardsContainer>

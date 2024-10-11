@@ -8,31 +8,31 @@ export function Production() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/producao-icons/contrato.png" />
                         <span>Controle de Contratos</span>
                     </Card>
                     <Card>
-                        <img src="/iot.png" />
+                        <img src="/producao-icons/etiqueta.png" />
                         <span>Emissão de Etiquetas</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
+                        <img src="/producao-icons/controle-pos-estoque.png" />
                         <span>Controle Posição do Estoque</span>
                     </Card>
                     <Card>
-                        <img src="/fita-metrica.png" />
+                        <img src="/producao-icons/controle-producao.png" />
                         <span>Controle Produção e Beneficiamento</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/producao-icons/controle-de-qualidade.png" />
                         <span>Controle Processo de Análise e Checagem</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/producao-icons/ticket.png" />
                         <span>Controle de Tickets de Entrada</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/producao-icons/controle-pass.png" />
                         <span>Controle de Passagem</span>
                     </Card>
                 </CardsContainer>

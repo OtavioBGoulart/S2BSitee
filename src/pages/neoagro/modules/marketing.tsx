@@ -8,7 +8,7 @@ export function Marketing() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/marketing-icons/mkt.png" />
                         <span>Acompanhamento de Clientes / Marketing</span>
                     </Card>
 

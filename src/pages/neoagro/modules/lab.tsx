@@ -8,23 +8,23 @@ export function Lab() {
             <ProductsContainer>
                 <CardsContainer>
                     <Card>
-                        <img src="/software.png" />
+                        <img src="/lab-icons/garantia.png" />
                         <span>Controle Atestado de Garantia</span>
                     </Card>
                     <Card>
-                        <img src="/iot.png" />
+                        <img src="/lab-icons/boletim-analise.png" />
                         <span>Controle Boletim de Análise</span>
                     </Card>
                     <Card>
-                        <img src="/business-intelligence.png" />
+                        <img src="/lab-icons/analise-produto.png" />
                         <span>Ficha de Análise de Produto</span>
                     </Card>
                     <Card>
-                        <img src="/fita-metrica.png" />
+                        <img src="/lab-icons/qualidade.png" />
                         <span>Controle de Qualidade do Produto</span>
                     </Card>
                     <Card>
-                        <img src="/melhoria.png" />
+                        <img src="/lab-icons/teste.png" />
                         <span>Testes avulsos de Laboratório</span>
                     </Card>
                 </CardsContainer>
