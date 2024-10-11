@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { useNavigation } from "../../../src/hooks/useNavigation";
+import { useNavigation } from "../../hooks/useNavigation";
 import { ArrowLeft } from "lucide-react";
-import { ModulesProps } from "../../../src/pages/neoagro/modules";
+import { ModulesProps } from "./modules";
 
 
 
@@ -166,8 +166,15 @@ const Card = styled.div`
     }
 
 
+    @media(max-width: 1043px) {
+        min-height: 100px;
+        height: auto;
+    }
+
     @media(max-width: 768px) {
         width: 70%;
+        min-height: 100px;
+        height: auto;
     }
 `;
 

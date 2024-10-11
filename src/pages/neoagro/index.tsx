@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Modules } from "./modules";
 import { useState } from "react";
-import { CSubModules } from "../../../public/subModules-icons/controllership/controllership-subModules";
+import { CSubModules } from "./controllership-subModules";
 import { AreasAtuação } from "./areas-atuação";
 export function Neoagro() {
 

@@ -24,7 +24,7 @@
   },
   "include": [
     "src",
-    "public/subModules-icons/controllership/controllership-subModules.tsx",
+    "src/pages/neoagro/controllership-subModules.tsx",
     "src/pages/home/cards.tsx",
     "src/pages/soluções/info_solutions.tsx"
   ]

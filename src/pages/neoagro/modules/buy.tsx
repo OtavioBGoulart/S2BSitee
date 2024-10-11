@@ -40,6 +40,11 @@ export const Container = styled.div`
     border-radius: 10px ;
     min-height: 800px;
 
+    @media( max-width: 768px) {
+        min-height: 300px;
+        height: auto;
+    }
+
 `
 
 export const Header = styled.div`
