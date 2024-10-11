@@ -94,6 +94,7 @@ const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 
     img {
         width: 150px;
@@ -126,6 +127,8 @@ const Container = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.light};
     padding: 10px 0;
     top: 0;
+    margin: 0; /* Garante que não tenha margens */
+    position: relative; /* Para o posicionamento do menu mobile */
 `;
 
 const NavItem = styled.span`
