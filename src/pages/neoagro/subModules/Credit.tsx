@@ -1,6 +1,6 @@
 import { Container, CardsContainer, ProductsContainer, Card, Header } from "../modules/buy";
 
-export function Credit() {
+export function Credito() {
 
 
     return (

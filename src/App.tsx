@@ -20,8 +20,8 @@ import { Accounting } from "./pages/neoagro/subModules/accounting";
 import { Costing } from "./pages/neoagro/subModules/costing";
 import { FinDep } from "./pages/neoagro/subModules/finance-dep";
 import { TaxDep } from "./pages/neoagro/subModules/tax-dep";
-import { Credit } from "./pages/neoagro/subModules/credit";
 import { Budget } from "./pages/neoagro/subModules/budget";
+import { Credito } from "./pages/neoagro/subModules/credit";
 
 
 const router = createBrowserRouter([
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/neoagro/controladoria/credito-e-cobranca",
-        element: <Credit />
+        element: <Credito />
       },
       {
         path: "/neoagro/controladoria/custeio",
