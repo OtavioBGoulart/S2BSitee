@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 
 type SubmenuType = "solutions" | "about" | "contacts" | "mobile" | null;
+type PathType = "home" | "ERP" | "BI" | "sobre" | "contato" | null;
 
 export function Navbar() {
     const { goToSolutions, goHome, goAbout, goToContacts, goToNeoagro } = useNavigation();
@@ -11,8 +12,32 @@ export function Navbar() {
 
     function handleSubmenuToggle(menu: SubmenuType) {
         setOpenSubmenu(menu === openSubmenu ? null : menu);
-        console.log(menu)
     };
+
+    function goTopath(path: PathType) {
+
+        if (path === "home") {
+            goHome();
+        }
+
+        if (path === "ERP") {
+            goToNeoagro();
+        }
+
+        if (path === "BI") {
+            goToSolutions();
+        }
+
+        if (path === "sobre") {
+            goAbout();
+        }
+
+        if (path === "contato") {
+            goToContacts();
+        }
+
+        setOpenSubmenu(null);
+    }
 
     return (
         <Container>
@@ -52,11 +77,11 @@ export function Navbar() {
                 <Menu onClick={() => handleSubmenuToggle("mobile")} />
                 {openSubmenu === "mobile" && (
                     <MobileMenu>
-                        <SubmenuItem onClick={goHome}>Home</SubmenuItem>
-                        <SubmenuItem onClick={goToNeoagro}>ERP Neoagro</SubmenuItem>
-                        <SubmenuItem onClick={goToSolutions}>Business Intelligence</SubmenuItem>
-                        <SubmenuItem onClick={goAbout}>Sobre</SubmenuItem>
-                        <SubmenuItem onClick={goToContacts}>Contato</SubmenuItem>
+                        <SubmenuItem onClick={() => goTopath("home")}>Home</SubmenuItem>
+                        <SubmenuItem onClick={() => goTopath("ERP")}>ERP Neoagro</SubmenuItem>
+                        <SubmenuItem onClick={() => goTopath("BI")}>Business Intelligence</SubmenuItem>
+                        <SubmenuItem onClick={() => goTopath("sobre")}>Sobre</SubmenuItem>
+                        <SubmenuItem onClick={() => goTopath("contato")}>Contato</SubmenuItem>
                     </MobileMenu>
                 )}
             </MenuItem>
